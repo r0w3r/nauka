@@ -3,8 +3,9 @@
 
 
 class Flight:
+    """ A flight with a particular passendger aircraft."""
     
-    def __init__(self, number):
+    def __init__(self, number, aircraft):
         if not number[:2].isalpha():
             raise ValueError(f"No airline code in '{number}'")
 
@@ -14,6 +15,10 @@ class Flight:
         if not (number[2:].isdigit() and int(number[2:]) <= 9999):
             raise Value;error(f"Invalid route number '{number}'")
         self._number = number
+        self._aircraft = aircraft
+
+    def aircraft_model(self):
+        return self._aircraft.model()
 
     def number(self):
         return self._number
