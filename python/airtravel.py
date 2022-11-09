@@ -16,6 +16,9 @@ class Flight:
             raise Value;error(f"Invalid route number '{number}'")
         self._number = number
         self._aircraft = aircraft
+        rows, seats = self._aircraft.seating_()
+        self._seating = [None] + [{letter: None for letter in seats} for _ in rows]
+
 
     def aircraft_model(self):
         return self._aircraft.model()
