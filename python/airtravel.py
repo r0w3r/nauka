@@ -38,20 +38,6 @@ class Flight:
         Raises:
             ValueError: If The seat is unavalible.
         """
-#        rows, seat_letters = self._aircraft.seating_plan()
-#
-#        letter = seat[-1]
-#        if letter not in seat_letters:
-#            raise ValueError(f"Invalid seat letter {letter}")
-#
-#        row_text = seat[:-1]
-#        try:
-#            row = int(row_text)
-#        except ValueError:
-#            raise ValueError(f"Invalid seat row {row_text}")
-#        
-#        if row not in rows:
-#            raise ValueError(f"Invalid row number {row}")
 
         row, letter = self._parse_seat(seat)
         
@@ -116,24 +102,6 @@ class Flight:
                 if passenger is not None:
                     yield (passenger, f"{row}{letter}")
 
-
-
-#class Aircraft:
-#
-#    def __init__(self, registration, model, num_rows, num_seats_per_row):
-#        self._registration = registration
-#        self._model = model
-#        self._num_rows = num_rows
-#        self._num_seats_per_row = num_seats_per_row
-#
-#    def registration(self):
-#        return self._registration
-#
-#    def model(self):
-#        return self._model
-#
-#    def seating_plan(self):
-#        return (range(1, self._num_rows + 1), "ABCDEFGJK"[:self._num_seats_per_row])
 
 
 class Aircraft:
