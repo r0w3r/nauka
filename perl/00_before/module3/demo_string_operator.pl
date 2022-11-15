@@ -1,6 +1,8 @@
 #!/usr/bin/perl
-#Demo program to demonstrate constants and variables.
+
+use utf8;
 use strict;
+use warnings;
 use feature 'say';
 
 my $card1 = qq/Visa/;
@@ -14,3 +16,4 @@ print ("The first two characters are ", substr($card1, 0, 2), "\n");
 
 print($card1 . $card2, "\n");
 print($card1 x 4, "\n");
+
