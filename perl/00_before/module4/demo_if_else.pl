@@ -1,5 +1,6 @@
-# Demonstrate the if, if-else, if-elseif. 
 #!/usr/bin/perl
+
+use utf8;
 use strict;
 use warnings;
 
