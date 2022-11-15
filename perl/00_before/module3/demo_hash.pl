@@ -1,5 +1,7 @@
-# Demonstrate Perl Hash. 
 #!/usr/bin/perl
+
+use utf8;
 use strict;
 use warnings;
+
 
