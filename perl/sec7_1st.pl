@@ -9,9 +9,4 @@ my %my_hash = (
   "name_02" => "tomasz",
   "name_03" => "bogdan",
 );
-$my_hash{"name_04"} = "adam";
-
-foreach(values(%my_hash))
-{
-  print("$_\n")
-}
+print ("$my_hash{\"name_01\"}\n");
