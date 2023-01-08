@@ -9,4 +9,15 @@ my %my_hash = (
   "name_02" => "tomasz",
   "name_03" => "bogdan",
 );
-print ("$my_hash{\"name_01\"}\n");
+foreach(keys(%my_hash)){
+  print("$_, ");
+}
+print("\n");
+
+foreach(values(%my_hash)){
+  print("$_, ");
+}
+print("\n");
+while((my $key, my $value) = each(%my_hash)){
+  print("$key: $value\n");
+}
