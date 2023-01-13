@@ -4,12 +4,8 @@ use utf8;
 use strict;
 use warnings;
 
-my $some_var = "Welcome to Perl";
-if($some_var =~ /perl/)
+$_ = "Hello Bartosz, how are you today?";
+if(/(\S+.*[u])/)
 {
-  print("Perl was found!!\n");
-}
-else
-{
-  print("Perl was not found!!\n");
+  print("$1 \n");
 }
