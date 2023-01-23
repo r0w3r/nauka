@@ -4,9 +4,9 @@ use utf8;
 use strict;
 use warnings;
 
+my @my_list = ();
 sub list_of_names
 {
-  my @my_list = ();
   my $filename = 'names.txt';
   open(FILE, "<", $filename) || die("Error:\n$!");
  while( chomp(my $name = <FILE>))
@@ -50,4 +50,57 @@ sub add_new_customer{
   }
 }
 
+sub search_for_customer{
+  print("\nEnter name of customer: ");
+  chomp(my $name_of_customer = <STDIN>);
 
+  foreach my $name (@my_list)
+  {
+    if (lc($name_of_customer) eq lc($name) )
+    {
+      print("\n$name was found!!\n");
+      return;
+    }
+  }
+}
+#Start the Perl Application Here.
+
+print("\n\n\t\tWelcome To Joe's Bar & Grill Guest List\n\n");
+print("\t\t\tDesigned By: Me\n\n");
+
+&list_of_names();
+my $opt_sel = &get_user_option();
+while ($opt_sel != 4 )
+{
+  if ($opt_sel == 1)
+  {
+    &search_for_customer();
+    $opt_sel = &get_user_option();
+  }
+  elsif ($opt_sel == 2)
+  {
+    &add_new_customer();
+    $opt_sel = &get_user_option();
+  }
+  elsif ($opt_sel == 3)
+  {
+    &get_customer();
+    $opt_sel = &get_user_option();
+  }
+  else
+  {
+    print("\nPlese select a valid option!!!\n");
+    $opt_sel = &get_user_option();
+  }
+}
+
+my $filename = 'names.txt';
+open(FILE, ">", $filename) || die("Error:\n$!");
+foreach my $name (@my_list) 
+{
+  chomp($name);
+  print(FILE "$name\n");
+}
+close(FILE);
+print("\nExiting...\n\n");
+exit;
