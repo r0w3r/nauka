@@ -26,7 +26,7 @@ variable "bella" {
     name = string
     color = string
     age = number
-    foof = list(string)
+    food = list(string)
     favorite_pet = bool
   })
   default = {
