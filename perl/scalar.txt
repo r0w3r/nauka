@@ -1,0 +1,16 @@
+INTEGER LITERALS:
+0
+2001
+-40
+137
+54234324464265 - same as below.
+54_234_324_464_265
+
+NONDECIMA INTEGER LITERALS:
+0377          #same as 255 decimal
+0o377         #same as 255 decimal
+0xff          #same as 255 decimal
+0b11111111    #same as 255 decimal
+
+FLOATING-POINT LITERALS:
+
