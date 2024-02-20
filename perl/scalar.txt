@@ -86,3 +86,15 @@ INTERPOLATION OF SCALAR VARIABLE INTO STRINGS:
 $meal = "stek z brontosaura";
 $barney = "fred zjadl $meal";   # $barney is now "fred zjadl stek z brontozaura"
 $barney = 'fred zjadl ' . $meal;# another wa to write that
+$fred = 'hello';
+print "\$fred";       # prints '$fred' not 'hello'
+print '$fred';        # does the same
+
+CHARACTER CODE PINT:
+chr() change code to character, ord() do it from character to code
+
+my $alef = chr( 0x05D0 );
+my $alpha = chr( hex( '03B1'));
+my $omega = chr( 0x03C9 );
+print $alef.' '.$alpha.' '.$omega. "\n";
+
