@@ -31,5 +31,33 @@ NUMERIC OPERATOS:
 10.2 / 0.3 # 10.2 divided by 0.3, or 34
 10 / 3     # always floating-point divide, so 3.3333333...
 
-STRINGS:
+SINGLE-QUOTED STRING LITERALS:
+'fred'      # those four characters: f,r,e and d
+'barney'    # those six characters
+''          # the null string (no characters)
+'⅚∞☃☠'      # some "wide" unicode characters
+'hello
+there'      # hello, newline, there (11 characters total)
+'hello\nthere'
 
+DOUBLE-QUOTED STRINGS LITERALS:
+"barney"        # just the same as 'barney'
+"hello world\n" # hellow world and a newline
+"The last character  of this string is a quote marka: \""
+"coke\tsprite"  #coke, a tab, and sprite
+"\x{2668}"      # Unicode HOT SPRINGS character code point
+"\N{SNOWMAN}"   # Unicode snowman by name
+
+STRINGS OPERATORS:
+"hello" . "world"       # same as "hellowordl"
+"hello".' '."world"     # same as 'hello world'
+'hello world'."\n"      # same as "hello world \n"
+
+  Special string operator:
+  "fred" x 3        # is "fredfredfred"
+  "barney" x (4+1)  # is "baney" x 5 or "barneybarneybarneybarneybarney"
+  5 x 4.8           $ is realy "5" x 4, which is "5555"
+
+--
+0377      # taht is octal fo 255 decimal
+'0377'    # that is 377 decimal
