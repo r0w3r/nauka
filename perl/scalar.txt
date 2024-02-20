@@ -61,3 +61,18 @@ STRINGS OPERATORS:
 --
 0377      # taht is octal fo 255 decimal
 '0377'    # that is 377 decimal
+
+SCALAR ASSIGMENT:
+$fred = 17;              # give $fred the value of 17
+$barney = 'hello';       # give $barney the five-character string 'hello'
+$barney = $fred + 3;     # give barney the current valye of $fred plus 3 (20)
+$barney = $barney * 2;   # $barney is now $barney miltiplied by 2 (40)
+
+COMPOUDN ASSIGMENT OPERATORS:
+$fred = $fred + 5;      # without the compoudn assigment operator
+$fred += 5;             # with the compound assigment operator
+$barney = $barney * 3;
+$barney *= 3;
+$str = $str . " ";      # append a space to $str
+$str .= " ";            # sme thing with compound assigment
+
