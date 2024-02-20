@@ -76,3 +76,13 @@ $barney *= 3;
 $str = $str . " ";      # append a space to $str
 $str .= " ";            # sme thing with compound assigment
 
+OUTPUT WITH PRINT:
+print "hello world\n";    # say hello world, followed a newline
+print "The answer is ";
+print 6*7;
+print ".\n";
+
+INTERPOLATION OF SCALAR VARIABLE INTO STRINGS:
+$meal = "stek z brontosaura";
+$barney = "fred zjadl $meal";   # $barney is now "fred zjadl stek z brontozaura"
+$barney = 'fred zjadl ' . $meal;# another wa to write that
