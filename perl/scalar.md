@@ -122,8 +122,7 @@ while ($count < 10){\
 }\
 
 ### UNDEF VALUE
-+
------------------------------------------------------------------
++-----------------
 Variables hafe special UNDEF value before they are firs assigne.\
 If you use it as numeric value = 0\
 #Add up some odd numbers\
@@ -133,4 +132,4 @@ while ($n < 10 ){\
   $n +=2; # On to the next odd number\
 }\
 print "The total was $sum.\n";\
------------------------------------------------------------------
++-----------------
