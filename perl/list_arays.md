@@ -3,12 +3,12 @@ List is an orderd collection of scalars.\
 
 ### Accessing Elements of Array
 ```perl
-$fred[0] = "yabba";\
-$fred[1] = "dabba";\
-$fred[2] = "doo";\
-\
+$fred[0] = "yabba";
+$fred[1] = "dabba";
+$fred[2] = "doo";
+
 You can do this:
-$num = 2.4344;\
+$num = 2.4344;
 print $fred[$num - 1];      # Same as printting $fred[1]
 ```
 
