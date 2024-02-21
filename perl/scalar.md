@@ -112,4 +112,20 @@ chomp($text = <STDIN>);         # Read the text, without the newline char.
 $text = <STDIN>;                # Do the same thing
 chomp($text);                   # but in two steps
 
+THE WHILE CONTROL STRUCTURE:
+$count = 0;
+while ($count < 10){
+  $count += 2;
+  print "count is now $count\n"; #Gives values 2 4  6 8 10
+}
+UNDEF VALUE:
+Variables hafe special UNDEF value before they are firs assigne.
+If you use it as numeric value = 0
+#Add up some odd numbers
+$n = 1;
+while ($n < 10 ){
+  $sum += $n;
+  $n +=2; # On to the next odd number
+}
+print "The total was $sum.\n";
 
