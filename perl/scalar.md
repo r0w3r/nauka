@@ -1,33 +1,33 @@
 # SCALAR
 
 ### INTEGER LITERALS:
-0
-2001
--40
-137
-54234324464265 - same as below.
-54_234_324_464_265
+0\
+2001\
+-40\
+137\
+54234324464265 - same as below.\
+54_234_324_464_265\
 
 ### NONDECIMAL INTEGER LITERALS:
-0377          #same as 255 decimal
-0o377         #same as 255 decimal
-0xff          #same as 255 decimal
-0b11111111    #same as 255 decimal
+0377          #same as 255 decimal\
+0o377         #same as 255 decimal\
+0xff          #same as 255 decimal\
+0b11111111    #same as 255 decimal\
 
 ### FLOATING-POINT LITERALS:
-1.25
-255.000
-255.0
-7.25e45  # 7.25 time 10 to the power of the 45th (a big number)
--6.5e24  # negative 6.5 times 10 to the 25th
-         # (a big negative number)
--12e.-24 # negative 12 time 10 to the -24th
--1.2E-23 # another way to say that the # may be uppercase
-0x1f.0p3  # From perl v5.22 gexadecimal FP literals
+1.25\
+255.000\
+255.0\
+7.25e45  # 7.25 time 10 to the power of the 45th (a big number)\
+-6.5e24  # negative 6.5 times 10 to the 25th\
+         # (a big negative number)\
+-12e.-24 # negative 12 time 10 to the -24th\
+-1.2E-23 # another way to say that the # may be uppercase\
+0x1f.0p3  # From perl v5.22 gexadecimal FP literals\
 
 ### NUMERIC OPERATOS:
-2 + 3      # 2 plus 3, or 5
-5.1 - 2.4  # 5.1 minus 2.4, or 2.7
+2 + 3      # 2 plus 3, or 5\
+5.1 - 2.4  # 5.1 minus 2.4, or 2.7\
 3 * 12     # 3 times 12 = 36
 14 / 2     # 14 divided by 2, or 7
 10.2 / 0.3 # 10.2 divided by 0.3, or 34
