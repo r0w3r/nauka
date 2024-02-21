@@ -1,3 +1,5 @@
+*SCALAR*
++
 INTEGER LITERALS:
 0
 2001
@@ -128,4 +130,4 @@ while ($n < 10 ){
   $n +=2; # On to the next odd number
 }
 print "The total was $sum.\n";
-
++
