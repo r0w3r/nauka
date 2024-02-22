@@ -59,3 +59,23 @@ qw( fred barney betty wilma dino )              # same as earlier but less typin
 ```
 ##### *qw* stands for "quoted words" or "quoted by whitespace"
 Perl Treats it like single-quted string
+
+### List Assignment
+```perl
+($fred, $barney) = ($barney, $fred)     # Swap those values
+($betty[0], $betty[1]) = ($betty[1], $betty[0])
+($fred, $barney) = qw<flintstone rubble slate granite >;# two ignored items
+($wilma, $dino) = qw[flintstone]                        # $dino gets undef
+($rocks[0], $rocks[1], $rocks[2], $rocks[3] ) = qw/talc mica feldspar quartz/;  # you can build array with line of code like this
+```
+If you want to refer to entire array use @ sign before the name of the array(and no index brackets afterito)
+```perl
+@rocks = qw/ bedrock slate lava/;
+@tiny = ();                         # the empty list
+@giant = 1..1e5                     # a list with 100_000 elements
+@stuff = (@giant, undef, @giant);   # a list with 200_001 elements
+$dino = "granite";
+@quarry = (@rocks, "crushed rock", @tiny, $dino);
+```
+
+### The pop and push Operators
