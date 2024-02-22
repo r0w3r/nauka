@@ -135,20 +135,20 @@ unshift @array, @others;    # @array now has (1, 2, 3, 4, 5)
                                             #               fred barney betty)
 ```
 ### Interpolating Arrays into Strings
-There are no exttra spaces added before or after an interpolated array;
+There are no extra spaces added before or after an interpolated array;
 if you want those, you'll have to put them in yourself.\
-If you forget that arrays interpolate like this, you'll be suprised
-when you put an email address into a double-quioted string:
+If you forget that arrays interpolate like this, you'll be surprised
+when you put an email address into a double-quoted string:
 ```perl
 $email = "fred@bedrock.edu";    # WRONG! Tries to interpolate @bedrock
 ```
 To get aroud this problem, you escape the @ in a double-quoted string
-or use single-quoted string
+or use a single-quoted string
 ```perl
 $email = "fred\@bedrock.edu";   # Correct
 $email = 'fred@bedrock.edu';    # Another way to do that
 ```
-Aingle element of an array interpolates into its value,
+A single element of an array interpolates into its value,
 just as you'd expected from a scalar variable:
 ```perl
 @fred = qw(hello dolly);
