@@ -1,6 +1,6 @@
 # SCALAR
 
-### INTEGER LITERALS:
+### INTEGER LITERALS
 ```perl
 0
 2001
@@ -69,7 +69,7 @@ there'      # hello, newline, there (11 characters total)
 'hello world'."\n"      # same as "hello world \n"
 ```
 
-+ #####  Special string operator:
++ #####  Special string operator
 ```perl
   "fred" x 3        # is "fredfredfred"
   "barney" x (4+1)  # is "baney" x 5 or "barneybarneybarneybarneybarney"
