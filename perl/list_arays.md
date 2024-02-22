@@ -76,6 +76,17 @@ If you want to refer to entire array use @ sign before the name of the array(and
 @stuff = (@giant, undef, @giant);   # a list with 200_001 elements
 $dino = "granite";
 @quarry = (@rocks, "crushed rock", @tiny, $dino);
+@copy = @quarry;    # copy a list from one array to another
 ```
 
 ### The pop and push Operators
+##### The pop operator takes the last element off of an array and returns it:
+```perl
+@array = 5..9;
+$fred = pop(@array);    # $fred gets 9, @array now has (5, 6, 7, 8)
+$barney = pop(@array);  # $barntey gets 8, @array now has (5, 6, 7)
+@others = qw/ 9 0 2 1 0/;
+push @array, @others; @array now has those five new elements (19 total)
+```
+### The shift and uknshift Operators
+
