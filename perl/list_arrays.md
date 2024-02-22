@@ -134,5 +134,7 @@ unshift @array, @others;    # @array now has (1, 2, 3, 4, 5)
                                             # @array is qw(pebbles wilma dino
                                             #               fred barney betty)
 ```
-
+### Interpolating Arrays into Strings
+There are no exttra spaces added before or after an interpolated array;
+if you want those, you'll have to put them in yourself.
 
