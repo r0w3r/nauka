@@ -1,5 +1,5 @@
 # List and Arrays
-List is an orderd collection of scalars.\
+List is an orderd collection of scalars.
 
 ### Accessing Elements of Array
 ```perl
@@ -105,4 +105,34 @@ unshift @array, @others;    # @array now has (1, 2, 3, 4, 5)
 
 ### The splice Operator
 ##### *splice* adds  elements to the middle of a array.
+```perl
+@array = qw( pebbles dino fred barney betty);
+@removed = splice @array, 2;    # remove fred and everything after
+                                # @removed is qw( fred barney betty)
+                                # @array is qw(pebbles dino)
+```
+##### 3rd argument **specify a length**
+```perl
+@array = qw( pebbles dino fred barney betty);
+@removed = splice @array, 1, 2; # remove dino, fred
+                                # @removed is qw(dino fred)
+                                # @arra is qw(pebbles barney betty)
+```
+##### 4th argument **is a replacement list**
+```perl
+@array = qw( pebbles dino fred barney betty);
+@removed = splice @array, 1, 2, qw(wilma);  # remove dino, fred
+                                            # @removed is qw(dino fred)
+                                            # @array is qw(pebbles wilma
+                                            #               barney betty)
+```
+##### You don't have to remove any elements if you specify a length of 0
+```perl
+@array = qw( pebbles dino fred barney betty );
+@removed = splice @array, 1, 0, qw(wilma);  # remove nothing
+                                            # @removed is qw()
+                                            # @array is qw(pebbles wilma dino
+                                            #               fred barney betty)
+```
+
 
