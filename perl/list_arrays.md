@@ -1,4 +1,4 @@
-## List and Arrays
+# List and Arrays
 List is an orderd collection of scalars.\
 
 ### Accessing Elements of Array
@@ -104,4 +104,5 @@ unshift @array, @others;    # @array now has (1, 2, 3, 4, 5)
 ##### Analogous to *pop*, *shift* returns undef if you give it an empty array variable.
 
 ### The splice Operator
+##### *splice* adds  elements to the middle of a array.
 
