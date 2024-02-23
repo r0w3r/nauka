@@ -167,4 +167,24 @@ print "this is ${fred}[3]\n";   # prints "right" (protected by braces)
 print "this is $fred"."[3]\n";  # right again (different string)
 print "this is $fred\[3]\n";    # right again (backslash hides it)
 ```
-### The foreeach Control Structure
+### The foreach Control Structure
+##### Like every **foreach** loop stps through a list values executing
+##### one iteration (time through the loop) for each value.
+```perl
+foreach $rock (qw/ bedrock slate lava /) {
+    print "One rock is $rock.\n";   # Prints name of the rocks
+}
+```
+The control variable($rock in that example) takes on a new value
+from the list for each iteration. The 1st time through the loop,
+it's "bedrock"; the 3rd time, it's "lava". The control variable 
+is not a copy of the list element - **IT ACTUALLY IS THE LIST ELEMENT.**
+```perl
+@rock = qw/ bedrock slate lava /;
+foreach $rock (@rocks) {
+    $rock = "\t$rock";      # put a tab in front of each element fo @rocks
+    $rock .= "\n";          # put a newline on the end each
+}
+print "The rocks are:\n", @rocks; # Each one is indented, on its own line
+```
+### Perl's Favorite Default: $_
