@@ -188,3 +188,21 @@ foreach $rock (@rocks) {
 print "The rocks are:\n", @rocks; # Each one is indented, on its own line
 ```
 ### Perl's Favorite Default: $_
+##### If you omit the control variable from the beginning of the *foreeach* loop,
+##### Perl uses its favorite defaylt variable, **$_**.
+```perl
+foreach (1..10){    # Uses $_ by default
+    print "I can count to $_!\n";
+}
+```
+This Perl's most common default but **not the only one**.\
+```perl
+$_ = "Yabba dabba doo\n";
+print;  # prints $_ by default
+```
+
+### The reverse Operator
+The *reverse* operator takes a list of values(which may com from an array) and
+return the list in the opposite orde.
+
+
