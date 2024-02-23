@@ -204,5 +204,21 @@ print;  # prints $_ by default
 ### The reverse Operator
 The *reverse* operator takes a list of values(which may com from an array) and
 return the list in the opposite orde.
+```perl
+@fred = 6..10;
+@barney = reverse(@fred);   # gets 10, 9, 8, 7, 6
+@wilma = reverse 6..10;     # gets the same thing, without the other array
+@fred = reverse @fred;      # puts the result back into the original array
+```
+##### The last line is noterworthy because it uses **@fred** twice.
+Perl always calculates the value being assigned (on the right) before it begins
+the actual assigment.
+##### Remember that *reveerse* returns the reversed list; it doesn't affect its arguments.
+If the return values isn't assigned anywhere, it's useless:
+```perl
+reverse @fred;          # WRONG - doen't change @ fred
+@fred = reverse @fred;  # that's better
+```
+### The sort Operator
 
 
