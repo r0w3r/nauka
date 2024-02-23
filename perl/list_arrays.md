@@ -155,3 +155,16 @@ just as you'd expected from a scalar variable:
 $y = 2;
 $x = "This is $fred[1]'s place";        # "This is dolly's place"
 $x = "This is $fred[$y-1]'s place ";    # same thing
+```
+Not that the index expression evaluates ad an ordinary expression. it is 
+*not* variable-interpolated first. It mean, if **$y** contains the string
+"2*4", we will get element 1 not 7. It will treated as just plain 2.
+```perl
+@fred = qw(eating rocks is wrong);
+$fred = "right";                # we are tryin to say "this is right[3]"
+print "this is $fred[3]\n";     # prints "wrong" usnig @fred[3]
+print "this is ${fred}[3]\n";   # prints "right" (protected by braces)
+print "this is $fred"."[3]\n";  # right again (different string)
+print "this is $fred\[3]\n";    # right again (backslash hides it)
+```
+### The foreeach Control Structure
