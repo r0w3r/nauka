@@ -221,4 +221,17 @@ reverse @fred;          # WRONG - doen't change @ fred
 ```
 ### The sort Operator
 
+Thhe sort operator takes a list of values(whitch may come from an array)and sorts them
+in the internal character ordering.
+```perl
+@rocks = qw/ bedrock slate rubble granite /;
+@sorted = sort(@rocks);         # gets bedrock, granite rubble slate
+@back = reverse sort @rocks;    # These go from slate to bedrock
+@rocks = sort @rocks;           # puts sorted result back into @rocks
+@numbers = sort 97..102;        # Gets 100 ,101 ,102 ,97 ,98 ,99
+sort @rocks;                    # WRONG, doesn't modify @rocks
+@rocks = sort @rocks;           # Now ther rock collection is in order
+```
+
+### The each Operator
 
