@@ -263,6 +263,6 @@ Depending on your task, one or the other may be more convenient for you.
 $n = @people;               # the number 3
 ```
 
-### Using List-Producing Expressions ins Scalar context
+### Using List-Producing Expressions in Scalar context
 
 
