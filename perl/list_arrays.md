@@ -234,4 +234,25 @@ sort @rocks;                    # WRONG, doesn't modify @rocks
 ```
 
 ### The each Operator
+Every time you call each on an array, it retukrns two values for the next elemetn
+in the array - the index of the value an the value itself:
+```perl
+require v5.12;
+@rocks = qw/ bedrock slate rubble granite/;
+while (( $index, $value )) = each @rocks){
+    print "$index: $value\n";
+}
+```
+If you wanted to do this without **each**, you'd have to iterate through all of the 
+indices of the array and use the index to get the value:
+```perl
+@rocks = qw/ bedrock slate rubble granit /;
+foreach @index (0 .. $#rocks ) {
+    print "$index: $rocks[$index]\n";
+}
+```
+Depending on your task, one or the other may be more convenient for you.
+
+### Scalar and List Context
+
 
