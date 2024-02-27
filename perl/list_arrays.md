@@ -254,5 +254,15 @@ foreach @index (0 .. $#rocks ) {
 Depending on your task, one or the other may be more convenient for you.
 
 ### Scalar and List Context
+***This is the most IMPORTANT section!!!***
+```perl
+@people = qw( fred barney betty);
+@sorted = sort @people;     # list context: barney, betty, fred
+@numbmer = 42 + @people;    # scalar context: 42 +3 gives 45
+@list = @people;            # list of three people
+$n = @people;               # the number 3
+```
+
+### Using List-Producing Expressions ins Scalar context
 
 
