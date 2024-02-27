@@ -264,5 +264,12 @@ $n = @people;               # the number 3
 ```
 
 ### Using List-Producing Expressions in Scalar context
+```perl
+$fred = something;              # scalar context
+@pebbles = something;           # list context
+($wilma, $betty) =              # list context
+($dino) = something;            # still list context!!
+```
+### Using List-Producing Expressions in List context
 
 
