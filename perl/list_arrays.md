@@ -271,5 +271,22 @@ $fred = something;              # scalar context
 ($dino) = something;            # still list context!!
 ```
 ### Using List-Producing Expressions in List context
+Going this direction is straightforward: **if an expression doesn't normally
+have a list value, the scalar value is atomaticaly promoted to make a
+one-element list:**
+```perl
+@fred = 6 * 7;          #gets the one-element list (42)
+@barney = "hello" . ' ' . "world";
+```
+Well, there's one possible catch. Since **undef** is a scalar value
+assigning **undef** to an array doesn't clear the array. The better way
+to do that is addigning an empty list:
+```perl
+@wilam = undef;     # OOPS! Gets the one-element list(undef)
+    # which is not the same as this:
+@betty = ( );       # A correct way to empty an array
+```
+
+### Forcing Scalar Context
 
 
