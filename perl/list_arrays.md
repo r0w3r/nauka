@@ -299,5 +299,20 @@ print "I have ", scalar @rocks, "rocks!\n";# Correct, gives a number
 ```
 
 ### <STDIN> in List Context
-
+when the input is coming from a file this will read ther rest of the line but how can
+there be an end-of-file when the input comes from the keyboard? On aunix type systems
+(Linux macOS), you'll normaly type a Ctrl+D to indicate to the system that there's
+no more input; the special character inself is never seen by Perl. For DOS/Windows systems,
+use Ctrl+Z instead.\
+***There is bug affecting some ports of Perl for DOS/Windows where the first lin of output to the terminal
+following the use of Ctrl+Z is obscured. On these sytems, you can work around this problem by
+simply printing a blank line("\n") after reading the input.***\
+Wouldn't it be nice if having read those lines, you could **chomp** the newlines all at once?
+It tuns out that you if you give **chomp** an array holding a list of lines, it will
+remove the new lines from each item in the list.
+```perl
+@lines = <STDIN>;   # Read all the lines
+chomp(@lines);      # Discard all the newlines characters
+chomp(@lines);      # Read the lines, not the newlines
+```
 
