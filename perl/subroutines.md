@@ -25,5 +25,39 @@ sub sum_of_fred_and_barney {
 }
 ```
 ### Arguments
+Perl *passes* the arguments to subroutine in default array called ***\@_*** .
+It is simmilar to $_ but stiil it's an array. If you wnat to use the 1st argument
+you call it $\_[0].
+```perl
+sub max {
+    if ($_[0] > $_[1]){
+        $_[0];
+    } else {
+        $[1];
+    }
+}
+```
+Code above is one of sollutions, but it's pretty ugly. It's hard to read, write and check.
+There is better way. There's another problem with this subroutine. The name &max is nice
+and short, but it doesn't remind us that this subroutine works prperly only if you
+called with exacly two paramters:
+```perl
+$n = &max(10, 15, 27);  # Oops!
+```
+**max** ingnores the extra parameters since it never looks at $\_[2]. Perl doesn't
+whether there's something in there or not. Perl Doesn't care about insufficient
+parameters either-you simply get **undef** if you look beyond the end of the
+\@_ array, aw with anny other array. You'll see how to make a better **&max**,
+which works with any number of parameters, later in this chapter.\
+The \@_ variable is private to the subroutine; if there's a global value in
+\@_ , Perl save it before it invokes the next subroutine and and restores its previous
+value upon return from that subroutine. This also means that a subroutine can pass
+arguments to another subroutine without fear of losing its own \@_ variable-the
+nested subroutine invocations gets its own \@_ in the same way. Even if the
+subroutine calls itself recursively, each invocations gets a new \@_ , so \@_ is
+always the parameter list for the *current* subroutine invocation.\
 
+##### Same mechanism as used with the control variable of the **foreach** loop
+
+### Private Variables in Subroutines
 
