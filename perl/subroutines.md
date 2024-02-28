@@ -18,5 +18,12 @@ you invoke a subroutine from within an expression by using the subroutine name
 &marine;    #   says Hello, sailor number 4!
 ```
 ### Return Values
+```perl
+sub sum_of_fred_and_barney {
+    print "Hej, you called the sum_of_fred_and_barney!\n";
+    $fred + $barney;    # That's the return value
+}
+```
+### Arguments
 
 
