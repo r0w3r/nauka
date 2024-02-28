@@ -271,8 +271,8 @@ $fred = something;              # scalar context
 ($dino) = something;            # still list context!!
 ```
 ### Using List-Producing Expressions in List context
-Going this direction is straightforward: **if an expression doesn't normally
-have a list value, the scalar value is atomaticaly promoted to make a
+Going in this direction is straightforward: **if an expression doesn't normally
+have a list value, the scalar value is automatically promoted to make a
 one-element list:**
 ```perl
 @fred = 6 * 7;          #gets the one-element list (42)
@@ -280,7 +280,7 @@ one-element list:**
 ```
 Well, there's one possible catch. Since **undef** is a scalar value
 assigning **undef** to an array doesn't clear the array. The better way
-to do that is addigning an empty list:
+to do that is by assigning an empty list:
 ```perl
 @wilam = undef;     # OOPS! Gets the one-element list(undef)
     # which is not the same as this:
@@ -293,16 +293,16 @@ By using ***scalar*** fake function you can tell Perl to provide a scalar
 context:
 ```perl
 @rocks = qw( talc quartz jade obsidian );
-print "How many ocks do you have?\n";
+print "How many rocks do you have?\n";
 print "I have ", @rocks, "rocks!\n";    # WRONG prints names of rocks
 print "I have ", scalar @rocks, "rocks!\n";# Correct, gives a number
 ```
 
-### **<STDIN>** in List Context
+### **\<STDIN\>** in List Context
 when the input is coming from a file this will read ther rest of the line but how can
 there be an end-of-file when the input comes from the keyboard? On aunix type systems
-(Linux macOS), you'll normaly type a Ctrl+D to indicate to the system that there's
-no more input; the special character inself is never seen by Perl. For DOS/Windows systems,
+(Linux macOS), you'll normally type a Ctrl+D to indicate to the system that there's
+no more input; the special character itself is never seen by Perl. For DOS/Windows systems,
 use Ctrl+Z instead.\
 ***There is bug affecting some ports of Perl for DOS/Windows where the first lin of output to the terminal
 following the use of Ctrl+Z is obscured. On these sytems, you can work around this problem by
