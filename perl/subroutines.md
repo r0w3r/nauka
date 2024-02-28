@@ -8,4 +8,15 @@ sub marine {
 }
 ```
 
+### Invoking a Subroutine
+you invoke a subroutine from within an expression by using the subroutine name
+(with the ampersand):
+```perl
+&marine;    #   says Hello, sailor number 1!
+&marine;    #   says Hello, sailor number 2!
+&marine;    #   says Hello, sailor number 3!
+&marine;    #   says Hello, sailor number 4!
+```
+### Return Values
+
 
