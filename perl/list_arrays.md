@@ -289,4 +289,15 @@ to do that is addigning an empty list:
 
 ### Forcing Scalar Context
 
+By using ***scalar*** fake function you can tell Perl to provide a scalar 
+context:
+```perl
+@rocks = qw( talc quartz jade obsidian );
+print "How many ocks do you have?\n";
+print "I have ", @rocks, "rocks!\n";    # WRONG prints names of rocks
+print "I have ", scalar @rocks, "rocks!\n";# Correct, gives a number
+```
+
+### <STDIN> in List Context
+
 
