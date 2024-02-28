@@ -298,7 +298,7 @@ print "I have ", @rocks, "rocks!\n";    # WRONG prints names of rocks
 print "I have ", scalar @rocks, "rocks!\n";# Correct, gives a number
 ```
 
-### <STDIN> in List Context
+### **<STDIN>** in List Context
 when the input is coming from a file this will read ther rest of the line but how can
 there be an end-of-file when the input comes from the keyboard? On aunix type systems
 (Linux macOS), you'll normaly type a Ctrl+D to indicate to the system that there's
