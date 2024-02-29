@@ -60,4 +60,27 @@ always the parameter list for the *current* subroutine invocation.\
 ##### Same mechanism as used with the control variable of the **foreach** loop
 
 ### Private Variables in Subroutines
+But if Perl can give you a ne \@_ for every invocation, can't it give you variables
+for your own use as well? Of course it can.\
+By defaul, all variables in aperl are global variables; tha is, they are accessible
+from every par of the program. But you can create private variables called *lexical
+variables* at any time with the **my** operator:
+```perl
+sub max {
+    my($m, $n);         # new private variables for this block
+    ($m, $n) = @_       # give nemes to the parameters
+    if ($m > $n ){ $m } else { $n }
+}
+```
+these variables are private (or *scoped*) to the enclosin block; any other $m or $n is totally
+unaffected by these two. And that goes the other way too-no other code can access
+or modify these private variables, ba accidnet or design. So you could drop this
+sugroutine into any Perl program in the world and know that you wouldn't mess up
+that programs's **$m** and **$n** (if any)'
+```perl
+my($m, $n) = @_     # Name the subroutine parameters
+```
+That one statement creates the private variables and sets their values.
+
+### Variable Length Parameters Lists
 
