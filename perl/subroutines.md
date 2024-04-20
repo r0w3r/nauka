@@ -83,14 +83,14 @@ my($m, $n) = @_     # Name the subroutine parameters
 That one statement creates the private variables and sets their values.
 
 ### Variable Length Parameters Lists
-    In real-world Perl code, subroutines often gave parameter list of arbitary length.
+In real-world Perl code, subroutines often gave parameter list of arbitary length.
 That's because of Perl's "no unnecessery limits" philosofy that you've already
 seen. Of course, this is unlike many traditional progarmming languages, which
 require every subroutine to be strictly typed; that is to permit to only a certain
 predefined number of parameters of predefined types. It's nice that Perl is so
 flexible, but (as you saw with the **&max** routine earlier) that may couse problems
  when you call a subroutine with a different number of arguments that it expexts.\
-    Of course, you can easly check that the subroutine has the right number of
+Of course, you can easly check that the subroutine has the right number of
 arguments by examining the **@_** array. for example, you could have written
 **&man** to check its argument list like this:
 ```perl
