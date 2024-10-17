@@ -52,3 +52,13 @@ Without ;virtualization, running multiple sysems requires separate phisical unit
    * Parallel and serial ports
 
 ### Benefits of Using Virtual Machines
+
+- Isolation
+    Chalanges tht VM isolations adresses: failures
+    If a guest OS experiences a failure because it runs beyond its specifications
+    limits, other VMs are not affected.\
+    Why? Each VM is an isolated software cantainer with an application and operating
+    systems. Problems atat affect one guest operating systems do not affect other
+    VMs running on the same host.
+
+
